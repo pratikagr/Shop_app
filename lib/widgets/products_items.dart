@@ -15,13 +15,15 @@ class Productsitems extends StatelessWidget {
       child: GridTile(
         child: GestureDetector(
           onTap: () {
-            Navigator.of(context).pushNamed(ProductDetailScreen.routeName);
+            Navigator.of(context).pushNamed(
+              ProductDetailScreen.routeName,
+              arguments: id);
               
           child: Image.network(
             imageUrl,
             fit: BoxFit.cover,
-          ),
-        ),
+          );
+          }),
         footer: GridTileBar(
           leading: IconButton(
               color: Theme.of(context).accentColor,
